@@ -20,26 +20,12 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -47,25 +33,18 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1 \vspace{-2pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -76,21 +55,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -99,120 +69,79 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
+    \textbf{\Huge \scshape Alessandro Festante} \\ \vspace{2pt}
+    \small Staff Machine Learning Engineer --- Production ML, Recommender Systems \& GenAI Evaluation
 \end{center}
 
+\section{Summary}
+\small{Machine Learning Scientist and Engineer with 6+ years of experience building production ML systems across recommender systems, ads ML, e-commerce personalization, transaction modeling, and GenAI evaluation. Specialized in deep recommendation architectures, including two-tower retrieval, sequence modeling, HSTU-based approaches, CTR prediction, and large-scale product recommendations. Experienced leading 0$\rightarrow$1 ML initiatives from modeling and evaluation to deployment, monitoring, retraining, and business impact.}\vspace{-6pt}
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
-    \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
-  \resumeSubHeadingListEnd
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Recommender Systems}{: Two-Tower Retrieval, Candidate Generation, Ranking, CTR Prediction, SKU Recommendations, Next-Transaction Prediction, Audience Segmentation} \\
+     \textbf{Deep Learning}{: PyTorch, TensorFlow/Keras, Embeddings, Sequence Modeling, HSTU-based Architectures, Representation Learning} \\
+     \textbf{ML Engineering}{: Airflow, Docker, FastAPI, Production Pipelines, Model Monitoring, Automated Retraining, Model Freshness} \\
+     \textbf{Data \& Experimentation}{: Python, SQL, PySpark, R, Offline Evaluation, A/B Testing, Metric Design} \\
+     \textbf{GenAI Evaluation}{: LLM-as-a-Judge, Recommendation Evaluation, E-commerce Evaluation, Meta-Evaluation, Perturbation-Based Evaluation, Rubric Design, Prompt Calibration} \\
+     \textbf{Classical ML}{: XGBoost, CatBoost, Churn Modeling, Forecasting, Lead Scoring}
+    }}
+ \end{itemize}
 
-
-%-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
+      {PayPal --- Machine Learning Scientist, MTS1}{June 2023 -- Present}
+      {San Jose, CA}{}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+        \resumeItem{Built PayPal Ads ML from 0$\rightarrow$1, including CTR prediction, audience segmentation, evaluation, and production deployment.}
+        \resumeItem{Developed deep recommender systems for e-commerce shopping, including two-tower retrieval architectures for candidate generation and personalization.}
+        \resumeItem{Worked on HSTU-based sequence modeling over shopping and transaction histories for next-transaction prediction and foundation-model-style personalization.}
+        \resumeItem{Shipped real-time SKU-level recommendations, churn modeling, and LLM-based data augmentation, contributing approximately \$4M incremental ARR/year.}
+        \resumeItem{Productionized SKU-level recommendation systems serving approximately 150M users, with ownership across deployment, monitoring, retraining, and model freshness.}
+        \resumeItem{Designed LLM-as-a-judge evaluation frameworks for e-commerce and recommender systems, including rubric design, calibrated prompts, perturbation-based meta-evaluations, scoring pipelines, and quality/safety assessment.}
+        \resumeItem{Co-inventor on patent: \emph{Dynamic Recommendation System Using Reinforcement Learning for Continual Learning}, US18796906.}
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
     \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
+      {Zettle by PayPal --- Machine Learning Scientist}{April 2021 -- June 2023}
+      {Stockholm, Sweden}{}
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
+        \resumeItem{Built and deployed ML models for merchant cross-sell, lead generation, and inventory intelligence using XGBoost, CatBoost, TensorFlow, Airflow, Docker, and FastAPI.}
+        \resumeItem{Partnered with product and engineering teams to launch merchant-facing ML products, including Zettle Inventory Helper.}
+      \resumeItemListEnd
 
     \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
+      {Epidemic Sound --- Data Scientist}{2020 -- 2021}
+      {Stockholm, Sweden}{}
       \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+        \resumeItem{Built data pipelines and music demand forecasting models to guide music and track acquisition strategy.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Paradox Interactive --- Data Scientist}{2018 -- 2020}
+      {Stockholm, Sweden}{}
+      \resumeItemListStart
+        \resumeItem{Developed game analytics and churn models for Cities: Skylines, Stellaris, and Surviving Mars.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Stockholm School of Economics}{Stockholm, Sweden}
+      {MSc, Applied Economic Analysis}{}
+    \resumeSubheading
+      {Bocconi University}{Milan, Italy}
+      {BSc, International Economics and Finance}{}
+  \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\section{Positioning}
+\small{Production recommender systems + deep retrieval/sequence modeling + e-commerce personalization + GenAI evaluation for recommendations.}
 
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
-
-
-%-------------------------------------------
 \end{document}
